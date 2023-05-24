@@ -13,6 +13,7 @@
   --accent-color: #8b8cb5;
   --accent-dark-color: #484a7d;
   --text-color: #2a2a2a;
+
 }
 
 /* Set the background color and text color */
@@ -64,6 +65,20 @@ nav {
 
 .nav-links li a:hover {
   background-color: var(--accent-color);
+}
+
+/* Style the hamburger menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: var(--text-color);
+  margin: 6px 0;
+  transition: background-color 0.3s ease;
 }
 
 /* Style the hero section */
@@ -182,5 +197,22 @@ footer p {
   #about .container {
     padding: 0;
     max-width: 100%;
+  }
+
+  /* Show the hamburger menu for mobile devices */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-active {
+    display: block;
+  }
+
+  .bar {
+    background-color: var(--accent-dark-color);
   }
 }
