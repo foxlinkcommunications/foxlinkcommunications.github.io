@@ -1,0 +1,186 @@
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the color palette */
+:root {
+  --primary-color: #5b5d9d;
+  --secondary-color: #111111;
+  --background-color: #ffffff;
+  --accent-color: #8b8cb5;
+  --accent-dark-color: #484a7d;
+  --text-color: #2a2a2a;
+}
+
+/* Set the background color and text color */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 80px; /* Adjust to leave space for the fixed navigation bar */
+}
+
+/* Add some spacing and center the content in the header */
+header {
+  text-align: center;
+  padding: 50px 0;
+  margin: 0;
+}
+
+/* Style the navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--accent-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo img {
+  width: 250px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--accent-color);
+}
+
+/* Style the hero section */
+.hero {
+  margin-top: 100px; /* Adjust as needed */
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Style the services section */
+#services {
+  text-align: center;
+  padding: 120px 0; /* Add additional padding to the top */
+  background-color: var(--background-color);
+}
+
+.service {
+  margin-bottom: 30px;
+}
+
+.service img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.service h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.service p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Style the about section */
+#about {
+  padding: 120px 0; /* Add additional padding to the top */
+  background-color: var(--accent-color);
+  text-align: center;
+}
+
+#about .container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Style the contact section */
+#contact {
+  padding: 120px 0; /* Add additional padding to the top */
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+textarea {
+  height: 100px;
+}
+
+button.btn {
+  padding: 10px 20px;
+  background-color: var(--accent-dark-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  /* Adjust the about section for mobile */
+  #about .container {
+    padding: 0;
+    max-width: 100%;
+  }
+}
