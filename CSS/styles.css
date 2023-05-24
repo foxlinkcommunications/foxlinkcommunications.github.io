@@ -86,6 +86,21 @@ nav {
   transition: transform 0.3s ease;
 }
 
+/* Close button style */
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn .close-icon {
+  display: block;
+}
+
 /* Navigation animation */
 @keyframes slideIn {
   from {
@@ -137,12 +152,11 @@ nav {
 
   /* Close button style */
   .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: var(--text-color);
-    font-size: 24px;
-    cursor: pointer;
+    display: block;
+  }
+
+  .close-btn .close-icon {
+    display: none;
   }
 
   .logo img {
@@ -195,7 +209,7 @@ nav {
 
 /* Style the about section */
 #about {
-  padding: 80px 20px; /* Updated padding for mobile view */
+  padding: 80px 0; /* Updated padding for mobile view */
   background-color: var(--accent-color);
   text-align: center;
 }
