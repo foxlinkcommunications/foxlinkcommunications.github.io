@@ -13,7 +13,6 @@
   --accent-color: #8b8cb5;
   --accent-dark-color: #484a7d;
   --text-color: #2a2a2a;
-
 }
 
 /* Set the background color and text color */
@@ -46,8 +45,18 @@ nav {
   z-index: 999;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   width: 250px;
+  display: block;
+}
+
+.logo-small {
+  display: none;
 }
 
 .nav-links li {
@@ -67,7 +76,7 @@ nav {
   background-color: var(--accent-color);
 }
 
-/* Style the hamburger menu */
+/* Hamburger menu */
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -78,7 +87,77 @@ nav {
   height: 4px;
   background-color: var(--text-color);
   margin: 6px 0;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Show the hamburger menu for mobile devices */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    background-color: var(--accent-color); /* Set the background color to match the navigation bar */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    z-index: 999;
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links.nav-active {
+    width: 70%; /* Adjust as needed */
+  }
+
+  .nav-links li {
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    animation-delay: 0.3s;
+    margin-top: 20px; /* Add spacing between navigation items */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .bar {
+    background-color: var(--accent-dark-color);
+  }
+
+  /* Close button style */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .logo img {
+    display: block;
+    width: 250px;
+  }
+
+  .logo-small {
+    display: none;
+    width: 250px;
+  }
 }
 
 /* Style the hero section */
@@ -189,30 +268,4 @@ footer {
 
 footer p {
   font-size: 14px;
-}
-
-/* Mobile responsive styles */
-@media screen and (max-width: 768px) {
-  /* Adjust the about section for mobile */
-  #about .container {
-    padding: 0;
-    max-width: 100%;
-  }
-
-  /* Show the hamburger menu for mobile devices */
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .nav-active {
-    display: block;
-  }
-
-  .bar {
-    background-color: var(--accent-dark-color);
-  }
 }
