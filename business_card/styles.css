@@ -60,12 +60,15 @@ h1 {
 /* Contact styles */
 .contact {
     margin-top: 20px;
+    border-collapse: collapse;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
 }
 
 .contact-item span {
@@ -139,5 +142,14 @@ h1 {
 
     .info {
         flex-grow: 1;
+    }
+
+    .contact {
+        margin-top: 20px;
+    }
+
+    .contact-item {
+        margin-bottom: 0;
+        padding-top: 0;
     }
 }
