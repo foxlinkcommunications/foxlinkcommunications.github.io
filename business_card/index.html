@@ -24,41 +24,7 @@
         </div>
     </div>
 
-    <div class="container3D">
-        <div class="card3D">
-            <div class="front3D">
-                <img src="images/logo.png" alt="Logo">
-            </div>
-            <div class="back3D">
-                <h1>Harman Randhawa</h1>
-                <p class="job-title">Founder & CEO</p>
-                <p class="company">FoxLink Communications Ltd.</p>
-                <div class="contact">
-                    <p><span class="label">Phone:</span> (647) 965-4321</p>
-                    <p><span class="label">Email:</span> harman@foxlink.ca</p>
-                    <p><span class="label">Website:</span> www.foxlink.ca</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // JavaScript for 3D card animation control
-        document.querySelector(".card3D").addEventListener("mousemove", function(e) {
-            var card = this;
-            var cardWidth = card.offsetWidth;
-            var cardHeight = card.offsetHeight;
-            var xAxisRotation = (cardHeight / 2 - e.pageY) / 10; // Adjust rotation sensitivity
-            var yAxisRotation = (e.pageX - cardWidth / 2) / 10; // Adjust rotation sensitivity
-
-            card.style.transform = "rotateX(" + xAxisRotation + "deg) rotateY(" + yAxisRotation + "deg)";
-        });
-
-        document.querySelector(".card3D").addEventListener("mouseout", function() {
-            this.style.transform = "rotateX(0deg) rotateY(0deg)";
-        });
-
-        // JavaScript for download vCard button
         document.getElementById("download-contact-btn").addEventListener("click", function() {
             var contactData = [
                 "BEGIN:VCARD",
