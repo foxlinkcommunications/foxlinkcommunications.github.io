@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="business-card">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="info">
+                <h1>Harman Randhawa</h1>
+                <p class="job-title">Founder & CEO</p>
+                <p class="company">FoxLink Communications Ltd.</p>
+                <div class="contact">
+                    <p><span class="label">Phone:</span> <a href="tel:6479654321">(647) 965-4321</a></p>
+                    <p><span class="label">Email:</span> <a href="mailto:harman@foxlink.ca">harman@foxlink.ca</a></p>
+                    <p><span class="label">Website:</span> <a href="https://www.foxlink.ca">www.foxlink.ca</a></p>
+                </div>
+            </div>
+            <button id="download-contact-btn" class="iphone-button">Add to Contacts</button>
+        </div>
+    </div>
+
+    <div class="container3D">
+        <div class="card3D">
+            <div class="front3D">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="back3D">
+                <h1>Harman Randhawa</h1>
+                <p class="job-title">Founder & CEO</p>
+                <p class="company">FoxLink Communications Ltd.</p>
+                <div class="contact">
+                    <p><span class="label">Phone:</span> (647) 965-4321</p>
+                    <p><span class="label">Email:</span> harman@foxlink.ca</p>
+                    <p><span class="label">Website:</span> www.foxlink.ca</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for 3D card animation control
+        document.querySelector(".card3D").addEventListener("mousemove", function(e) {
+            var card = this;
+            var cardWidth = card.offsetWidth;
+            var cardHeight = card.offsetHeight;
+            var xAxisRotation = (cardHeight / 2 - e.pageY) / 10; // Adjust rotation sensitivity
+            var yAxisRotation = (e.pageX - cardWidth / 2) / 10; // Adjust rotation sensitivity
+
+            card.style.transform = "rotateX(" + xAxisRotation + "deg) rotateY(" + yAxisRotation + "deg)";
+        });
+
+        document.querySelector(".card3D").addEventListener("mouseout", function() {
+            this.style.transform = "rotateX(0deg) rotateY(0deg)";
+        });
+
+        // JavaScript for download vCard button
+        document.getElementById("download-contact-btn").addEventListener("click", function() {
+            var contactData = [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                "N:Randhawa;Harman;;;",
+                "FN:Harman Randhawa",
+                "ORG:FoxLink Communications Ltd.;",
+                "TEL;TYPE=CELL:(647)965-4321",
+                "EMAIL;TYPE=WORK:harman@foxlink.ca",
+                "URL;TYPE=WORK:https://www.foxlink.ca",
+                "END:VCARD"
+            ].join("\n");
+
+            var blob = new Blob([contactData], { type: "text/vcard" });
+            var url = URL.createObjectURL(blob);
+
+            var link = document.createElement("a");
+            link.setAttribute("href", url);
+            link.setAttribute("download", "contact.vcf");
+            link.style.display = "none";
+
+            document.body.appendChild(link);
+            link.click();
+
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
