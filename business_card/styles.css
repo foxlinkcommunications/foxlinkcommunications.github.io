@@ -58,18 +58,40 @@ h1 {
 }
 
 /* Contact styles */
-.contact p {
-    font-size: 14px;
-    color: #666666;
-    margin-bottom: 8px;
+.contact {
+    margin-top: 20px;
 }
 
-.label {
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item span {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item span img {
+    width: 60px;
+    height: 60px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
     font-weight: bold;
-    margin-right: 4px;
+    margin-bottom: 4px;
+    text-align: left;
 }
 
-a {
+.contact-item p {
+    margin: 0;
+    text-align: left;
+}
+
+.contact-item a {
     text-decoration: none;
     color: #007bff;
 }
@@ -97,12 +119,25 @@ a {
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     .container {
-        justify-content: flex-start;
-        padding: 40px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
     }
 
     .business-card {
         width: 90%;
         max-width: 480px;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        margin: 0 auto 20px;
+    }
+
+    .info {
+        flex-grow: 1;
     }
 }
