@@ -6,8 +6,8 @@ function sendEmail(email) {
     window.location.href = 'mailto:' + email;
 }
 
-function openWebsite(website) {
-    window.open(website, '_blank');
+function openWebsite() {
+    window.open("https://www.foxlink.ca", "_blank");
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -52,8 +52,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     var websiteDiv = document.querySelector(".contact-item.website");
-    websiteDiv.addEventListener("click", function() {
-        var website = document.querySelector(".contact-item.website p a").textContent;
-        openWebsite(website);
-    });
+    websiteDiv.addEventListener("click", openWebsite);
 });
