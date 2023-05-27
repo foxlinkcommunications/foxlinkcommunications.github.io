@@ -13,7 +13,7 @@ function handleHoursTrackerFormSubmission(event) {
     gapi.load('client:auth2', function() {
         gapi.client.init({
             apiKey: 'AIzaSyCLcwV5nM7KJ5IZN3fR22xramXNk2lD4Iw',
-            clientId: '277548571627-558asait9atmchm7074dbuvod91nbj96.apps.googleusercontent.com',
+            clientId: '277548571627-rempavoh7q2v549jth0u9q93qgir4rll.apps.googleusercontent.com',
             discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
             scope: 'https://www.googleapis.com/auth/spreadsheets',
         }).then(function() {
