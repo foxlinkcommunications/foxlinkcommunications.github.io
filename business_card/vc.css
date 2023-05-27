@@ -73,6 +73,7 @@ h1 {
     justify-content: start; /* Adjust alignment */
     height: 120px; /* Increased height */
     margin-bottom: 18px;
+    margin-left: 20px;
     border-top: 1px solid #ddd;
     padding-top: 12px;
     cursor: pointer; /* Add cursor pointer */
@@ -88,12 +89,12 @@ h1 {
 }
 
 .contact-item span img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .contact-item h3 {
-    font-size: 26px;
+    font-size: 46px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: left;
@@ -102,7 +103,7 @@ h1 {
 
 .contact-item p {
     margin: 0;
-    font-size: 22px;
+    font-size: 36px;
     text-align: left;
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide overflow */
@@ -114,7 +115,7 @@ h1 {
     color: #007bff;
 }
 
-div.contact-item div{
+div.contact-item div {
     padding-left: 20px;
 }
 
