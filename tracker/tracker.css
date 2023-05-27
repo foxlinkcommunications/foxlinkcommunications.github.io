@@ -17,9 +17,12 @@
 /* Tracker form styles */
 .tracker-form {
     width: 95%;
-    height: 85vh;
+    height: 75vh;
     max-width: 950px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content vertically */
+    margin: auto;
     padding: 24px;
     background-color: #ffffff;
     border-radius: 8px;
