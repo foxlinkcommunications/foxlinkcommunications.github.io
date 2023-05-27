@@ -1,3 +1,15 @@
+function callPhoneNumber(phoneNumber) {
+    window.location.href = 'tel:' + phoneNumber;
+}
+
+function sendEmail(email) {
+    window.location.href = 'mailto:' + email;
+}
+
+function openWebsite(website) {
+    window.open(website, '_blank');
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("download-contact-btn").addEventListener("click", function() {
         var contactData = [
@@ -30,18 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var phoneDiv = document.querySelector(".contact-item.phone");
     phoneDiv.addEventListener("click", function() {
         var phoneNumber = document.querySelector(".contact-item.phone p").textContent;
-        window.location.href = "tel:" + phoneNumber;
+        callPhoneNumber(phoneNumber);
     });
 
     var emailDiv = document.querySelector(".contact-item.email");
     emailDiv.addEventListener("click", function() {
         var email = document.querySelector(".contact-item.email p a").textContent;
-        window.location.href = "mailto:" + email;
+        sendEmail(email);
     });
 
     var websiteDiv = document.querySelector(".contact-item.website");
     websiteDiv.addEventListener("click", function() {
         var website = document.querySelector(".contact-item.website p a").textContent;
-        window.open(website, "_blank");
+        openWebsite(website);
     });
 });
