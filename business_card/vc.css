@@ -17,7 +17,7 @@
 /* Business card styles */
 .business-card {
     width: 95%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Align content vertically */
