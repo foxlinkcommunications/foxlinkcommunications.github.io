@@ -17,7 +17,8 @@
 /* Tracker form styles */
 .tracker-form {
     width: 95%;
-    max-width: 500px;
+    height: 85vh;
+    max-width: 950px;
     margin: 0 auto;
     padding: 24px;
     background-color: #ffffff;
