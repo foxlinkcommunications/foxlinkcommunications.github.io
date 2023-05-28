@@ -10,35 +10,47 @@
             <h1>Job Tracker</h1>
             <form id="tracker-form" action="https://api.sheetmonkey.io/form/oRLcxN3XGNYmXzCYQy8MjY" method="post">
                 <div class="form-group">
-                    <label for="Job Number">Job/Service Order Number</label>
-                    <input type="text" id="job-order-number" name="job-order-number" required>
+                    <label for="Order-Number">Job/Service Order Number</label>
+                    <input type="text" id="Order-Number" name="Order-Number" required>
                 </div>
                 <div class="form-group">
                     <label for="JobType">Job Type</label>
                     <div>
                         <label>
-                            <input type="radio" name="job-type" value="Job" required> Job
+                            <input type="radio" name="Type" value="Job" required> Job
                         </label>
                         <label>
-                            <input type="radio" name="job-type" value="Service" required> Service
+                            <input type="radio" name="Type" value="Service" required> Service
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="Mileage-Start">Mileage Start</label>
-                    <input type="number" id="mileage-start" name="mileage-start" required>
+                    <input type="number" id="Mileage-Start" name="Mileage-Start" required>
                 </div>
                 <div class="form-group">
                     <label for="Mileage-End">Mileage End</label>
-                    <input type="number" id="mileage-end" name="mileage-end" required>
+                    <input type="number" id="Mileage-End" name="Mileage-End" required>
+                </div>
+                <div class="form-group">
+                    <label for="Date">Date</label>
+                    <input type="date" id="Date" name="Date" required>
+                </div>
+                <div class="form-group">
+                    <label for="Time-Start">Time Start</label>
+                    <input type="time" id="Time-Start" name="Time-Start" required>
+                </div>
+                <div class="form-group">
+                    <label for="Time-End">Time End</label>
+                    <input type="time" id="Time-End" name="Time-End" required>
                 </div>
                 <div class="form-group">
                     <label for="Description">Job/Service Order Description</label>
-                    <textarea id="job-description" name="job-description" required></textarea>
+                    <textarea id="Description" name="Description" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="Comments">Technician Comments</label>
-                    <textarea id="technician-comments" name="technician-comments"></textarea>
+                    <textarea id="Comments" name="Comments"></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" id="submit-btn" class="iphone-button">Submit</button>
