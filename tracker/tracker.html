@@ -7,33 +7,37 @@
 <body>
     <div class="container">
         <div class="tracker-form">
-            <h1>Hours/Mileage/Job Tracker</h1>
-            <form id="tracker-form">
+            <h1>Job Tracker</h1>
+            <form id="tracker-form" action="https://api.sheetmonkey.io/form/oRLcxN3XGNYmXzCYQy8MjY" method="post">
                 <div class="form-group">
-                    <label for="job-order-number">Job/Service Order Number</label>
+                    <label for="Job Number">Job/Service Order Number</label>
                     <input type="text" id="job-order-number" name="job-order-number" required>
                 </div>
                 <div class="form-group">
-                    <label for="toggle">Job/Service Toggle</label>
-                    <label class="toggle">
-                        <input type="checkbox" id="toggle" name="toggle">
-                        <span class="slider"></span>
-                    </label>
+                    <label for="JobType">Job Type</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="job-type" value="Job" required> Job
+                        </label>
+                        <label>
+                            <input type="radio" name="job-type" value="Service" required> Service
+                        </label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="mileage-start">Mileage Start</label>
+                    <label for="Mileage-Start">Mileage Start</label>
                     <input type="number" id="mileage-start" name="mileage-start" required>
                 </div>
                 <div class="form-group">
-                    <label for="mileage-end">Mileage End</label>
+                    <label for="Mileage-End">Mileage End</label>
                     <input type="number" id="mileage-end" name="mileage-end" required>
                 </div>
                 <div class="form-group">
-                    <label for="job-description">Job/Service Order Description</label>
+                    <label for="Description">Job/Service Order Description</label>
                     <textarea id="job-description" name="job-description" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="technician-comments">Technician Comments</label>
+                    <label for="Comments">Technician Comments</label>
                     <textarea id="technician-comments" name="technician-comments"></textarea>
                 </div>
                 <div class="form-group">
@@ -43,7 +47,7 @@
         </div>
     </div>
 
-    <script src="tracker.js"></script>
-    <script src="https://apis.google.com/js/api.js"></script>
+   <!-- <script src="tracker.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script> -->
 </body>
 </html>
