@@ -56,7 +56,7 @@ button {
   display: block;
   width: 100%;
   padding: 12px;
-  font-size: 26px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
   background-color: #007bff;
@@ -78,7 +78,7 @@ button:hover {
   }
 
   h1 {
-      font-size: 20px;
+      font-size: 36px;
       margin-bottom: 16px;
   }
 
@@ -87,11 +87,11 @@ button:hover {
   input[type="date"],
   input[type="time"],
   textarea {
-      font-size: 16px;
+      font-size: 34px;
   }
 
   button {
-      font-size: 22px;
-      padding: 36px;
+      font-size: 36px;
+      padding: 20px;
   }
 }
