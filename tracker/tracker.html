@@ -3,12 +3,26 @@
 <head>
     <title>Hours/Mileage/Job Tracker</title>
     <link rel="icon" href="../images/logo-small.png" type="image/png">
-    <link rel="stylesheet" href="tracker.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/app-logo.png">
+    <link rel="stylesheet" href="tracker.css">
+    <style>
+        .logo-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
+        .logo-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="FoxLink Communications" class="logo-image">
+        </div>
         <div class="tracker-form">
             <h1>Job Tracker</h1>
             <form id="tracker-form" onsubmit="submitForm(event)" method="post">
