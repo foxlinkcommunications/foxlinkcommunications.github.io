@@ -96,7 +96,6 @@ button:hover {
   input[type="text"],
   input[type="number"],
   input[type="date"],
-  input[type="time"],
   textarea {
       font-size: 16px;
   }
@@ -104,6 +103,16 @@ button:hover {
   button {
       font-size: 22px;
       padding: 20px;
+  }
+
+  /* Additional Styles for Mobile */
+  .form-group.time-group {
+      flex-direction: column;
+  }
+
+  .form-group.time-group input[type="time"] {
+      margin-right: 0;
+      margin-bottom: 10px;
   }
 }
 
@@ -132,13 +141,4 @@ button:hover {
 
 .form-group.radio-group label input[type="radio"] {
   margin-right: 5px;
-}
-
-.form-group.time-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.form-group.time-group input[type="time"] {
-  margin-right: 10px;
 }
